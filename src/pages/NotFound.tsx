@@ -1,8 +1,13 @@
-import { useLocation } from "react-router-dom";
+
+import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import MoroccanHeader from "@/components/MoroccanHeader";
 
 const NotFound = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     console.error(
@@ -12,14 +17,21 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
-          Return to Home
-        </a>
-      </div>
+    <div className="min-h-screen moroccan-pattern flex items-center justify-center">
+      <Card className="max-w-md mx-auto p-6 bg-white/95 shadow-lg">
+        <MoroccanHeader title="404" subtitle="الصفحة غير موجودة" />
+        
+        <p className="text-center text-morocco-teal mb-6">
+          عذراً، الصفحة التي تبحث عنها غير موجودة أو تم نقلها.
+        </p>
+        
+        <Button 
+          onClick={() => navigate("/")} 
+          className="w-full bg-morocco-teal hover:bg-morocco-blue"
+        >
+          العودة للصفحة الرئيسية
+        </Button>
+      </Card>
     </div>
   );
 };

@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Morocco themed colors
+				morocco: {
+					red: '#C1272D',      // Moroccan flag red
+					blue: '#0A3161',     // Deep blue from Moroccan tiles
+					teal: '#006D77',     // Teal from traditional decor
+					terracotta: '#CD5334', // Terracotta from buildings
+					gold: '#E9B949',     // Gold from decorative elements
+					green: '#486824',    // Green from Moroccan gardens
+					sand: '#F2D0A4',     // Desert sand color
 				}
+			},
+			fontFamily: {
+				arabic: ['Noto Sans Arabic', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
