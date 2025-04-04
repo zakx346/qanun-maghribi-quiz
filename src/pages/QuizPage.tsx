@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { quizCategories } from "@/data/quizCategories";
 import { getQuestionsByCategory } from "@/data/quizQuestions";
